@@ -5,7 +5,7 @@ import YourBotArmy from "./YourBotArmy";
 const ParentContainer = () => {
   const [bots, setBots] = useState([]);
   const [botArmy, setBotArmy] = useState([]);
-
+  // Fetch data from the JSON server
   useEffect(() => {
     fetch("http://localhost:8001/bots")
       .then((res) => res.json())
@@ -13,13 +13,16 @@ const ParentContainer = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  // Function to add bot to your Army Bot
   const addToBotArmy = (bot) => setBotArmy([...botArmy, bot]);
 
+  // Function to remove bot from your army bot
   const removeBotFromBotArmy = (id) => {
     const updatedBotArmy = botArmy.filter((bot) => bot.id !== id);
     setBotArmy(updatedBotArmy);
   };
 
+  // Function to delete bot
   const deleteBot = (id) => {
     fetch(`http://localhost:8001/bots/${id}`, { method: "DELETE" })
       .then((response) => {
@@ -41,7 +44,7 @@ const ParentContainer = () => {
   };
 
   return (
-    <div>
+    <div className="bot-container">
       <BotCollection
         bots={bots}
         onAddBot={addToBotArmy}

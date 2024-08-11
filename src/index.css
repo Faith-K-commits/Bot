@@ -16,10 +16,14 @@ body {
   justify-content: center;
 }
 
-.container {
+.bot-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.bot-container > * {
+  flex: 1;
+  margin: 10px;
 }
 
 button {

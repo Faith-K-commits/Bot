@@ -1,6 +1,7 @@
 import React from "react";
 
 const Bot = ({ bot, onAddBot, onRemoveBot, onDelete }) => {
+  // Function to handle click of a bot in either bot list or your army bot list
   const handleClick = () => {
     if (onAddBot) {
       onAddBot(bot);
