@@ -9,9 +9,11 @@ const ParentContainer = () => {
   useEffect(() => {
     fetch("http://localhost:8001/bots")
       .then((res) => res.json())
-      .then((data) => setBots(data))
+      .then((data) => {
+        setBots(data);
+      })
       .catch((error) => console.log(error));
-  }, []);
+  }, []); // Dependency array
 
   // Function to add bot to your Army Bot
   const addToBotArmy = (bot) => setBotArmy([...botArmy, bot]);
