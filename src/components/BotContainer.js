@@ -12,7 +12,9 @@ const ParentContainer = () => {
       .then((data) => {
         setBots(data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+      });
   }, []); // Dependency array
 
   // Function to add bot to your Army Bot
