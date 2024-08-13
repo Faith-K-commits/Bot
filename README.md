@@ -14,6 +14,8 @@ As a user, you can:
 
 - Discharge Bots: Permanently discharge a bot from service by clicking the red "x" button. This action will delete the bot from both the backend and the YourBotArmy component.
 
+Live link: https://battlr-bot.netlify.app/
+
 # Usage
 
 Once the application is running, you can :
